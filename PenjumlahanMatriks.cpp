@@ -14,6 +14,10 @@ int main()
     const int baris = sizeof(matriks1) / sizeof(matriks1)[0];
     const int kolom = sizeof(matriks1)[0] / sizeof(matriks1)[0][0];
 
+    cout << "==============================\n";
+    cout << "Hasil Penjumlahan Matriks\n";
+    cout << "==============================\n";
+
     int hasil[baris][kolom];
 
     for (int i = 0; i < baris; i++)
@@ -21,10 +25,11 @@ int main()
         for (int j = 0; j < kolom; j++)
         {
             hasil[i][j] = matriks1[i][j] + matriks2[i][j];
-            cout << hasil[i][j] << " ";
+            cout << "| " << hasil[i][j] << " ";
         }
-        cout << '\n';
+        cout << "|\n";
     }
+    cout << "==============================";
 
     return 0;
 }
