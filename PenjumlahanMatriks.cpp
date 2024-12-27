@@ -25,10 +25,18 @@ int main()
         for (int j = 0; j < kolom; j++)
         {
             hasil[i][j] = matriks1[i][j] + matriks2[i][j];
+        }
+    }
+
+    for (int i = 0; i < baris; i++)
+    {
+        for (int j = 0; j < kolom; j++)
+        {
             cout << "| " << hasil[i][j] << " ";
         }
         cout << "|\n";
     }
+
     cout << "==============================";
 
     return 0;
