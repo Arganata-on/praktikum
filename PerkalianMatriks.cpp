@@ -1,6 +1,9 @@
 #include <iostream>
 using namespace std;
 
+void perkalian(int baris, int kolom, int hasil[][3], int matriks1[][3], int matriks2[][3]);
+void hasilPerkalian(int baris, int kolom, int hasil[][3]);
+
 int main()
 {
     int matriks1[][3] = {{1, 1, 1},
@@ -20,6 +23,15 @@ int main()
 
     int hasil[baris][kolom] = {0};
 
+    perkalian(baris, kolom, hasil, matriks1, matriks2);
+    hasilPerkalian(baris, kolom, hasil);
+
+    cout << "==============================";
+
+    return 0;
+}
+void perkalian(int baris, int kolom, int hasil[][3], int matriks1[][3], int matriks2[][3])
+{
     for (int i = 0; i < baris; i++)
     {
         for (int j = 0; j < kolom; j++)
@@ -30,7 +42,9 @@ int main()
             }
         }
     }
-    
+}
+void hasilPerkalian(int baris, int kolom, int hasil[][3])
+{
     for (int i = 0; i < baris; i++)
     {
         for (int j = 0; j < kolom; j++)
@@ -39,8 +53,4 @@ int main()
         }
         cout << "|\n";
     }
-
-    cout << "==============================";
-
-    return 0;
 }
